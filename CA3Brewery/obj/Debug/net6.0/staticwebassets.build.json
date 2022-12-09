@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D+1gepfFDX6F0zvbO+GylCWVzQsr2lfh4EQczjZN22k=",
+  "Hash": "IV6W2O7ImXQy9Gw3TfLyVVDNGu7mU7tK2EPApSkkflk=",
   "Source": "CA3Brewery",
   "BasePath": "/",
   "Mode": "Root",
@@ -695,6 +695,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.Bson.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\lib\\netstandard1.3\\Newtonsoft.Json.Bson.dll"
     },
     {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
@@ -1732,6 +1749,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\runtimes\\browser-wasm\\lib\\net6.0\\System.Net.Http.dll"
+    },
+    {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Net.Http.Formatting.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\lib\\netstandard2.0\\System.Net.Http.Formatting.dll"
     },
     {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Json.dll",
@@ -3228,6 +3262,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\runtimes\\browser-wasm\\lib\\net6.0\\System.Web.dll"
+    },
+    {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.dll",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Web.Http.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.9\\lib\\net45\\System.Web.Http.dll"
+    },
+    {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.WebHost.dll",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Web.Http.WebHost.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\5.2.9\\lib\\net45\\System.Web.Http.WebHost.dll"
     },
     {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.HttpUtility.dll",
@@ -4947,6 +5015,23 @@
       "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.SecureString.dll"
     },
     {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\GwJ1Xmq1.gz",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Web.Http.WebHost.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.WebHost.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.WebHost.dll"
+    },
+    {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\gZadW05o.gz",
       "SourceId": "CA3Brewery",
       "SourceType": "Computed",
@@ -6239,6 +6324,23 @@
       "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.ReaderWriter.dll"
     },
     {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\T9twPonD.gz",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Web.Http.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.Http.dll"
+    },
+    {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\TC8uJ46R.gz",
       "SourceId": "CA3Brewery",
       "SourceType": "Computed",
@@ -6562,6 +6664,23 @@
       "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.dll"
     },
     {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\wYVvq9hg.gz",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.Bson.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll"
+    },
+    {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\X+KJhIMo.gz",
       "SourceId": "CA3Brewery",
       "SourceType": "Computed",
@@ -6594,6 +6713,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.Debug.dll"
+    },
+    {
+      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\Xf8GveQ1.gz",
+      "SourceId": "CA3Brewery",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Net.Http.Formatting.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll"
     },
     {
       "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\Debug\\net6.0\\build-gz\\xSnpiZFz.gz",
