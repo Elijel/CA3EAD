@@ -1,0 +1,42 @@
+﻿@page "/"
+@using CA3Brewery.Brewery
+@inject IBreweryService BreweryService
+
+@page "/breweries"
+
+@using System.Net.Http
+@using Newtonsoft.Json
+@using Microsoft.AspNetCore.RenderTree
+
+
+
+<h1>Breweries</h1>
+
+@functions {
+    // Define a function to make a request to the API and return the response as a string
+    public async Task<string> GetBreweries()
+    {
+        // Create an instance of the HttpClient class
+        var client = new HttpClient();
+
+        // Make a request to the API endpoint
+        var response = await client.GetAsync("https://www.openbrewerydb.org/breweries?by_city=seattle");
+
+        // Read the response and convert it to a string
+        var responseString = await response.Content.ReadAsStringAsync();
+
+        // Parse the JSON string and return it as a string
+        var breweries = JsonConvert.DeserializeObject<List<BreweryDto>>(responseString);
+        return JsonConvert.SerializeObject(breweries);
+    }
+}
+
+<div>
+    @{
+        // Call the GetBreweries function and render the response as HTML
+        var breweries = GetBreweries();
+        @Html.Raw(breweries)
+        ;
+    }
+</div>
+}
