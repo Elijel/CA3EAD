@@ -1,52 +1,73 @@
 ﻿@page "/"
 @using CA3Brewery.Brewery
 @inject IBreweryService BreweryService
+@using System.Collections.Generic
+@using Newtonsoft.Json
+@inject HttpClient Http
 
 <PageTitle>Brewery</PageTitle>
 <h1>Brewery List</h1>
-<br/>
+<br />
 <div>
-    @if(Brewery == null)
+    @if (breweries != null)
     {
-        <p>Loading Brewery...</p>
-    }
-    else
-    {
-        <div class="row">
-            @foreach(var item in Brewery)
+        <ul>
+            @foreach (var brewery in breweries)
             {
-                <div class="col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">@item.name</h5>
-                            <p> class="text">@item.id</p>
-                        </div>
-                    </div>
-                </div>
+                <li @onclick="@(() => GetBreweryDetails(brewery.id))">@brewery.id</li>
             }
-        </div>
+        </ul>
+    }
+
+    @if (selectedBrewery != null)
+    {
+        <h2>Brewery Details</h2>
+        <p>Name: @selectedBrewery.name</p>
+        <p>Brewery Type: @selectedBrewery.brewery_type</p>
+        <p>Address: @selectedBrewery.street</p>
+        // Other details of the selected brewery
     }
 </div>
 
-@if(!string.IsNullOrEmpty(Error))
-{
-    <p>Error</p>
-}
-
 @code {
-    public List<BreweryItem> Brewery { get; set; }
+    private List<BreweryItem> breweries = new List<BreweryItem>();
+    private BreweryItem selectedBrewery;
     public string Error { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            Brewery = await BreweryService.GetBrewery();
+            var breweryService = new BreweryService(Http);
+            breweries = await BreweryService.GetBrewery();
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Error = e.Message;
+            Console.WriteLine(Error);
         }
     }
+
+    private async Task GetBreweryDetails(string id)
+    {
+        try
+        {
+            // Use the injected instance of the BreweryService instead of creating a new instance
+            selectedBrewery = await BreweryService.GetBreweryDetails(id);
+
+            // Update the UI to show the selected brewery
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            // Display an error message to the user
+            Error = ex.Message;
+            Console.WriteLine(Error);
+        }
 }
+}
+
+@if (Error != null)
+{
+    <p>Error: @Error</p>
 }
