@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CA3Brewery"
+    "\\CA3Brewery",
+    "\\CA3Brewery\\Pages"
   ],
-  "SelectedNode": "\\CA3Brewery\\CA3Brewery.sln",
+  "SelectedNode": "\\CA3Brewery\\Pages\\Index.razor",
   "PreviewInSolutionExplorer": false
 }

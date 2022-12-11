@@ -1,5 +1,52 @@
-﻿<h3>Component</h3>
+﻿@page "/brewery/{id}"
+@using CA3Brewery.Brewery
+@inject IBreweryService BreweryService
+@inject NavigationManager Navigation
+@using System.Collections.Generic
+
+<PageTitle>Brewery Details</PageTitle>
+
+@if (selectedBrewery != null)
+{
+    <h2>Brewery Details</h2>
+    <p>Name: @selectedBrewery.name</p>
+    <p>Brewery Type: @selectedBrewery.brewery_type</p>
+    <p>Address: @selectedBrewery.street</p>
+    // Other details of the selected brewery
+}
+
+<button class="btn btn-primary" @onclick="Return">Return</button>
 
 @code {
+    [Parameter]
+    public string Id { get; set; }
 
+    private BreweryItem selectedBrewery;
+    public string Error { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Use the injected instance of the BreweryService to get the details of the selected brewery
+            selectedBrewery = await BreweryService.GetBreweryDetails(Id);
+        }
+        catch (Exception e)
+        {
+            Error = e.Message;
+            Console.WriteLine(Error);
+        }
+    }
+
+    private void Return()
+    {
+
+        Navigation.NavigateTo("/");
+
+    }
+}
+
+@if (Error != null)
+{
+    <p>Error: @Error</p>
 }

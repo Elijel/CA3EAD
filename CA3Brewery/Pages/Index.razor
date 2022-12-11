@@ -3,6 +3,9 @@
 @inject IBreweryService BreweryService
 @using System.Collections.Generic
 @using Newtonsoft.Json
+@using Microsoft.AspNetCore.Components.Routing
+@inject NavigationManager Navigation
+
 @inject HttpClient Http
 
 <PageTitle>Brewery</PageTitle>
@@ -14,18 +17,9 @@
         <ul>
             @foreach (var brewery in breweries)
             {
-                <li @onclick="@(() => GetBreweryDetails(brewery.id))">@brewery.id</li>
+                <li @onclick="@(() => NavigateToBreweryDetails(brewery.id))">@brewery.id</li>
             }
         </ul>
-    }
-
-    @if (selectedBrewery != null)
-    {
-        <h2>Brewery Details</h2>
-        <p>Name: @selectedBrewery.name</p>
-        <p>Brewery Type: @selectedBrewery.brewery_type</p>
-        <p>Address: @selectedBrewery.street</p>
-        // Other details of the selected brewery
     }
 </div>
 
@@ -36,6 +30,9 @@
 
     protected override async Task OnInitializedAsync()
     {
+        // Initialize the HttpClient instance in the OnInitializedAsync method
+        Http = new HttpClient();
+
         try
         {
             var breweryService = new BreweryService(Http);
@@ -48,23 +45,11 @@
         }
     }
 
-    private async Task GetBreweryDetails(string id)
-    {
-        try
-        {
-            // Use the injected instance of the BreweryService instead of creating a new instance
-            selectedBrewery = await BreweryService.GetBreweryDetails(id);
 
-            // Update the UI to show the selected brewery
-            StateHasChanged();
-        }
-        catch (Exception ex)
-        {
-            // Display an error message to the user
-            Error = ex.Message;
-            Console.WriteLine(Error);
-        }
-}
+    private void NavigateToBreweryDetails(string id)
+    {
+        Navigation.NavigateTo($"/brewery/{id}");
+    }
 }
 
 @if (Error != null)
