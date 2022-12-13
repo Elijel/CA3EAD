@@ -20,9 +20,9 @@ namespace CA3Brewery.Brewery
             _httpClient = httpClient;
         }
 
-        public async Task<List<BreweryItem>> GetBrewery()
+        public async Task<List<BreweryItem>> GetBrewery(int page)
         {
-            var response = await _httpClient.GetAsync($"{_breweryEndpoint}?per_page=50");
+            var response = await _httpClient.GetAsync($"{_breweryEndpoint}?page={page}&per_page=36");
             response.EnsureSuccessStatusCode();
 
             var string_ = await response.Content.ReadAsStringAsync();
@@ -42,6 +42,7 @@ namespace CA3Brewery.Brewery
             // Deserialize the response into a list of BreweryDto objects
             var dtoList = JsonConvert.DeserializeObject<List<BreweryDto>>(string_);
 
+            // Select a random brewery from the list
             // Select a random brewery from the list
             var random = new Random();
             var randomIndex = random.Next(0, dtoList.Count);
@@ -79,19 +80,6 @@ namespace CA3Brewery.Brewery
                 Error = $"No breweries found for search query '{query}'";
                 return new List<BreweryItem>();
             }
-
-            return dto.Select(x => x.ToBreweryItem()).ToList();
-        }
-
-
-        public async Task<List<BreweryItem>> GetBreweriesPaginated(int page)
-        {
-            var response = await _httpClient.GetAsync($"/breweries?page={page}?per_page=50");
-            response.EnsureSuccessStatusCode();
-
-            var string_ = await response.Content.ReadAsStringAsync();
-
-            var dto = JsonConvert.DeserializeObject<List<BreweryDto>>(string_);
 
             return dto.Select(x => x.ToBreweryItem()).ToList();
         }

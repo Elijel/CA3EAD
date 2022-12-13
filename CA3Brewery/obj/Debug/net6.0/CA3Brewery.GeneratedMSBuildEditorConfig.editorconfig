@@ -20,16 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/Component.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50LnJhem9y
+[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld0RldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/Component1.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50MS5yYXpvcg==
+[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewHome.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld0hvbWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewRandom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld1JhbmRvbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elije/source/repos/CA3EAD/CA3Brewery/_Imports.razor]
