@@ -1,0 +1,52 @@
+﻿@page "/random"
+@inject NavigationManager Navigation
+@using CA3Brewery.Brewery
+@inject IBreweryService BreweryService
+@using Newtonsoft.Json
+
+@inject HttpClient Http
+
+@if (Error != null)
+{
+    <p>Error: @Error</p>
+}
+
+@if (RandomBrewery != null)
+{
+    <h1>Random Brewery</h1>
+    <p>Name: @RandomBrewery.name</p>
+    <p>Brewery Type: @RandomBrewery.brewery_type</p>
+    <p>Address: @RandomBrewery.street</p>
+    // Other details of the selected brewery
+}
+
+<button class="btn btn-primary" @onclick="Return">Return</button>
+
+@code {
+    public BreweryItem RandomBrewery { get; set; }
+    public string Error { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Initialize the HttpClient instance in the OnInitializedAsync method
+        Http = new HttpClient();
+
+        try
+        {
+            var breweryService = new BreweryService(Http);
+            RandomBrewery = await BreweryService.GetRandomBrewery();
+        }
+        catch (Exception e)
+        {
+            Error = e.Message;
+            Console.WriteLine(Error);
+        }
+    }
+
+    private void Return()
+    {
+
+        Navigation.NavigateTo("/");
+
+    }
+}

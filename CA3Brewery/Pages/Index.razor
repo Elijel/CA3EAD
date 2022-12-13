@@ -11,20 +11,37 @@
 <PageTitle>Brewery</PageTitle>
 <h1>Brewery List</h1>
 <br />
+
+<button class="btn btn-primary mt-3" @onclick="OnInitializedAsync">Back</button>
+<button class="btn btn-primary mt-3" @onclick="NavigateRandom">Random</button>
+
+<div class="form-group">
+    <label for="searchInput">Search for a brewery:</label>
+    <input type="text" class="form-control" id="searchInput" @bind="searchQuery" />
+    <button class="btn btn-primary mt-3" @onclick="SearchBreweries">Search</button>
+</div>
 <div>
-    @if (breweries != null)
-    {
-        <ul>
+    <div class="card-columns">
+        <div class="row d-flex">
             @foreach (var brewery in breweries)
             {
-                <li @onclick="@(() => NavigateToBreweryDetails(brewery.id))">@brewery.id</li>
+                <div class="col-sm-4 mt-3">
+                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.id))">
+                        <div class="card-body">
+                            <h6 class="card-title">@brewery.name</h6>
+                            <p class="card-text">Brewery Type: @brewery.brewery_type</p>
+                        </div>
+                    </div>
+                </div>
             }
-        </ul>
-    }
+        </div>
+    </div>
 </div>
+
 
 @code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
+    private string searchQuery = "";
     private BreweryItem selectedBrewery;
     public string Error { get; set; }
 
@@ -45,14 +62,43 @@
         }
     }
 
+    // Method to search for breweries
+    private async Task SearchBreweries()
+    {
+        try
+        {
+            breweries = await BreweryService.SearchBreweries(searchQuery);
+        }
+        catch (Exception e)
+        {
+            Error = e.Message;
+            Console.WriteLine(Error);
+        }
+    }
 
     private void NavigateToBreweryDetails(string id)
     {
         Navigation.NavigateTo($"/brewery/{id}");
     }
+
+    private void NavigateBack()
+    {
+        Navigation.NavigateTo($"/");
+    }
+
+    private void NavigateRandom()
+    {
+        Navigation.NavigateTo($"/random");
+    }
 }
+
 
 @if (Error != null)
 {
     <p>Error: @Error</p>
+}
+
+@if (breweries.Count == 0)
+{
+    <p>No results found for search query for '@searchQuery'.</p>
 }
