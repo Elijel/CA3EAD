@@ -31,10 +31,10 @@
             @foreach (var brewery in breweries)
             {
                 <div class="col-sm-4 mt-3">
-                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.id))">
+                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.Id))">
                         <div class="card-body">
-                            <h6 class="card-title">@brewery.name</h6>
-                            <p class="card-text">Brewery Type: @brewery.brewery_type</p>
+                            <h6 class="card-title">@brewery.Name</h6>
+                            <p class="card-text">Brewery Type: @brewery.Brewery_type</p>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,6 @@
     </div>
 </div>
 
-
-
-
 @if (Error != null)
 {
     <p>Error: @Error</p>
@@ -53,11 +50,8 @@
 
 @code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
-    private string searchType;
-    private BreweryItem selectedBrewery;
-    public string Error { get; set; }
-    private int selectedPage = 10;
-
+    private string? searchType;
+    public string? Error { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -67,7 +61,7 @@
         try
         {
             var breweryService = new BreweryService(Http);
-            breweries = await BreweryService.GetBrewery(selectedPage);
+            breweries = await BreweryService.GetBrewery(1);
         }
         catch (Exception e)
         {
@@ -88,7 +82,6 @@
             Console.WriteLine(Error);
         }
     }
-
 
     //navigation
     private void NavigateToBreweryDetails(string id)

@@ -798,7 +798,6 @@ C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\build-gz\onQ+v5+S
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\blazor.boot.json
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\scopedcss\bundle\CA3Brewery.styles.css
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\scopedcss\projectbundle\CA3Brewery.bundle.scp.css
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\CA3Brewery.csproj.CopyComplete
@@ -1700,3 +1699,4 @@ C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\build-gz\QeiIN+yJ
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\build-gz\wpqB9OxX.gz
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\build-gz\Rs7GOzjE.gz
 C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\build-gz\a36tbFlk.gz
+C:\Users\elije\source\repos\CA3EAD\CA3Brewery\obj\Debug\net6.0\scopedcss\Shared\Main.razor.rz.scp.css

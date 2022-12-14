@@ -5,7 +5,7 @@
 @using System.Collections.Generic
 
 <PageTitle>Brewery Details</PageTitle>
-<h2><strong>Brewery Details</strong</h2>
+<h2><strong>Brewery Details</strong></h2>
 @if (selectedBrewery != null)
 {
     <table class="table table-sm table-striped table-dark">
@@ -18,33 +18,33 @@
       <tbody>
         <tr>
           <th scope="row">Name:</th>
-          <td>@selectedBrewery.name</td>
+          <td>@selectedBrewery.Name</td>
         </tr>
         <tr>
           <th scope="row">Brewery Type:</th>
-          <td>@selectedBrewery.brewery_type</td>
+          <td>@selectedBrewery.Brewery_type</td>
 
         </tr>
         <tr>
           <th scope="row">Address:</th>
-          <td>@selectedBrewery.street</td>
+          <td>@selectedBrewery.Street</td>
         </tr>
         <tr>
           <th scope="row">City:</th>
-          <td>@selectedBrewery.city</td>
+          <td>@selectedBrewery.City</td>
         </tr>
         <tr>
           <th scope="row">State:</th>
-          <td>@selectedBrewery.state</td>
+          <td>@selectedBrewery.State</td>
         </tr>
         <tr>
           <th scope="row">Country:</th>
-          <td>@selectedBrewery.country</td>
+          <td>@selectedBrewery.Country</td>
         </tr>
         <tr>
           <th scope="row">Website URL:</th>
           <td>
-              <a href="@selectedBrewery.website_url" target="_blank">@selectedBrewery.website_url</a>
+              <a href="@selectedBrewery.Website_url" target="_blank">@selectedBrewery.Website_url</a>
           </td>
         </tr>
       </tbody>
@@ -53,18 +53,21 @@
 
 <button class="btn btn-secondary" @onclick="Return">Return</button>
 
+@if (Error != null)
+{
+    <p>Error: @Error</p>
+}
+
 @code {
     [Parameter]
-    public string Id { get; set; }
-
-    private BreweryItem selectedBrewery;
-    public string Error { get; set; }
+    public string? Id { get; set; }
+    private BreweryItem? selectedBrewery;
+    public string? Error { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            // Use the injected instance of the BreweryService to get the details of the selected brewery
             selectedBrewery = await BreweryService.GetBreweryDetails(Id);
         }
         catch (Exception e)
@@ -80,9 +83,4 @@
         Navigation.NavigateTo("/");
 
     }
-}
-
-@if (Error != null)
-{
-    <p>Error: @Error</p>
 }

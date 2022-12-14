@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace CA3Brewery.Brewery
+﻿namespace CA3Brewery.Brewery
 {
     public interface IBreweryService
     {

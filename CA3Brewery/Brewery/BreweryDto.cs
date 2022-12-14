@@ -2,31 +2,31 @@
 {
     public class BreweryDto
     {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string brewery_type { get; set; }
-        public string street { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public string postal_code { get; set; }
-        public string country { get; set; }
-        public string phone { get; set; }
-        public string website_url { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Brewery_type { get; set; }
+        public string? Street { get; set; }
+        public string? City { get; set; }
+        public string? State { get; set; }
+        public string? Postal_code { get; set; }
+        public string? Country { get; set; }
+        public string? Phone { get; set; }
+        public string? Website_url { get; set; }
 
         public BreweryItem ToBreweryItem()
         {
             return new BreweryItem
             {
-                id = this.id,
-                name = this.name,
-                brewery_type = this.brewery_type,
-                street = this.street,
-                city = this.city,
-                state = this.state,
-                postal_code = this.postal_code,
-                country = this.country,
-                phone = this.phone,
-                website_url = this.website_url
+                Id = this.Id,
+                Name = this.Name,
+                Brewery_type = this.Brewery_type,
+                Street = this.Street,
+                City = this.City,
+                State = this.State,
+                Postal_code = this.Postal_code,
+                Country = this.Country,
+                Phone = this.Phone,
+                Website_url = this.Website_url
             };
         }
 

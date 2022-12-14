@@ -52,10 +52,10 @@
             @foreach (var brewery in breweries)
             {
                 <div class="col-sm-4 mt-3">
-                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.id))">
+                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.Id))">
                         <div class="card-body">
-                            <h6 class="card-title">@brewery.name</h6>
-                            <p class="card-text">Brewery Type: @brewery.brewery_type</p>
+                            <h6 class="card-title">@brewery.Name</h6>
+                            <p class="card-text">Brewery Type: @brewery.Brewery_type</p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
 
 @code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
-    public string Error { get; set; }
+    public string? Error { get; set; }
     private int selectedPage = 1;
 
     protected override async Task OnInitializedAsync()

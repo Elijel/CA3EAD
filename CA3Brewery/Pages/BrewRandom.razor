@@ -20,32 +20,32 @@
       <tbody>
         <tr>
           <th scope="row">Name:</th>
-          <td>@RandomBrewery.name</td>
+          <td>@RandomBrewery.Name</td>
         </tr>
         <tr>
           <th scope="row">Brewery Type:</th>
-          <td>@RandomBrewery.brewery_type</td>
+          <td>@RandomBrewery.Brewery_type</td>
 
         </tr>
         <tr>
           <th scope="row">Address:</th>
-          <td>@RandomBrewery.street</td>
+          <td>@RandomBrewery.Street</td>
         </tr>
         <tr>
           <th scope="row">City:</th>
-          <td>@RandomBrewery.city</td>
+          <td>@RandomBrewery.City</td>
         </tr>
         <tr>
           <th scope="row">State:</th>
-          <td>@RandomBrewery.state</td>
+          <td>@RandomBrewery.State</td>
         </tr>
         <tr>
           <th scope="row">Country:</th>
-          <td>@RandomBrewery.country</td>
+          <td>@RandomBrewery.Country</td>
         </tr>
         <tr>
           <th scope="row">Website URL:</th>
-          <td>@RandomBrewery.website_url</td>
+          <td>@RandomBrewery.Website_url</td>
         </tr>
       </tbody>
     </table>
@@ -60,8 +60,8 @@
 }
 
 @code {
-    public BreweryItem RandomBrewery { get; set; }
-    public string Error { get; set; }
+    public BreweryItem? RandomBrewery { get; set; }
+    public string? Error { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

@@ -23,10 +23,10 @@
             @foreach (var brewery in breweries)
             {
                 <div class="col-sm-4 mt-3">
-                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.id))">
+                    <div class="card" @onclick="@(() => NavigateToBreweryDetails(brewery.Id))">
                         <div class="card-body">
-                            <h6 class="card-title">@brewery.name</h6>
-                            <p class="card-text">Brewery Type: @brewery.brewery_type</p>
+                            <h6 class="card-title">@brewery.Name</h6>
+                            <p class="card-text">Brewery Type: @brewery.Brewery_type</p>
                         </div>
                     </div>
                 </div>
@@ -46,22 +46,9 @@
 }
 
 @code {
-    //<div>
-    //<label>Select page:</label>
-    //@for (int i = 1; i <= 5; i++)
-    //{
-    //<button class="btn btn-primary" @onclick="() => SelectPage(i)">@i</button>
-    //}
-    //</div>
-}
-
-@code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
     private string searchQuery = "";
-    private BreweryItem selectedBrewery;
-    public string Error { get; set; }
-    private int selectedPage = 10;
-
+    public string? Error { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -71,7 +58,7 @@
         try
         {
             var breweryService = new BreweryService(Http);
-            breweries = await BreweryService.GetBrewery(selectedPage);
+            breweries = await BreweryService.GetBrewery(10);
         }
         catch (Exception e)
         {
@@ -98,16 +85,6 @@
     private void NavigateToBreweryDetails(string id)
     {
         Navigation.NavigateTo($"/brewery/{id}");
-    }
-
-    private void NavigateBack()
-    {
-        Navigation.NavigateTo($"/");
-    }
-
-    private void NavigateRandom()
-    {
-        Navigation.NavigateTo($"/random");
     }
 
 }
