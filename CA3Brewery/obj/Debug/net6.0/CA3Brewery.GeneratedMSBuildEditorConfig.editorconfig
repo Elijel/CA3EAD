@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = CA3Brewery
 build_property.RootNamespace = CA3Brewery
-build_property.ProjectDir = C:\Users\elije\source\repos\CA3EAD\CA3Brewery\
+build_property.ProjectDir = C:\Users\elije\OneDrive\Desktop\CA3BreweryDB\CA3Brewery\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\elije\source\repos\CA3EAD\CA3Brewery
+build_property.MSBuildProjectDirectory = C:\Users\elije\OneDrive\Desktop\CA3BreweryDB\CA3Brewery
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/App.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewDetail.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Pages/BrewDetail.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld0RldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewHome.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Pages/BrewHome.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld0hvbWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewRandom.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Pages/BrewRandom.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld1JhbmRvbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewSearch.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Pages/BrewSearch.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld1NlYXJjaC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Pages/BrewType.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Pages/BrewType.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJld1R5cGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/_Imports.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elije/source/repos/CA3EAD/CA3Brewery/Shared/Main.razor]
+[C:/Users/elije/OneDrive/Desktop/CA3BreweryDB/CA3Brewery/Shared/Main.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-u9fuk6nkcw

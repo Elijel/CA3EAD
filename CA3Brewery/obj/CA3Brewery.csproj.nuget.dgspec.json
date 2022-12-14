@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\CA3Brewery.csproj": {}
+    "C:\\Users\\elije\\OneDrive\\Desktop\\CA3BreweryDB\\CA3Brewery\\CA3Brewery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\CA3Brewery.csproj": {
+    "C:\\Users\\elije\\OneDrive\\Desktop\\CA3BreweryDB\\CA3Brewery\\CA3Brewery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\CA3Brewery.csproj",
+        "projectUniqueName": "C:\\Users\\elije\\OneDrive\\Desktop\\CA3BreweryDB\\CA3Brewery\\CA3Brewery.csproj",
         "projectName": "CA3Brewery",
-        "projectPath": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\CA3Brewery.csproj",
+        "projectPath": "C:\\Users\\elije\\OneDrive\\Desktop\\CA3BreweryDB\\CA3Brewery\\CA3Brewery.csproj",
         "packagesPath": "C:\\Users\\elije\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\obj\\",
+        "outputPath": "C:\\Users\\elije\\OneDrive\\Desktop\\CA3BreweryDB\\CA3Brewery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,30 +45,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNet.WebApi": {
-              "target": "Package",
-              "version": "[5.2.9, )"
-            },
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.9, )"
-            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.12, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.12, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

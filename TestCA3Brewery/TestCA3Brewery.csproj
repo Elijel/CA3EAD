@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{56405F8C-1350-41A4-9F4F-E8360E37C2C9}</ProjectGuid>
+    <ProjectGuid>{24E7050A-9F11-4E97-8263-E091C51D5F29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestCA3Brewery</RootNamespace>
-    <AssemblyName>TestCA3Brewery</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>TESTCA3Brewery</RootNamespace>
+    <AssemblyName>TESTCA3Brewery</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CA3Brewery\CA3Brewery.csproj">
-      <Project>{0cbc8c3a-131d-4f5b-870e-78a7f0bd5353}</Project>
+      <Project>{c8f95466-c680-4297-b82d-7f2d0548a9e5}</Project>
       <Name>CA3Brewery</Name>
     </ProjectReference>
   </ItemGroup>
