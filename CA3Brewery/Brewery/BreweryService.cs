@@ -31,6 +31,18 @@ namespace CA3Brewery.Brewery
 
             return dto.Select(x => x.ToBreweryItem()).ToList();
         }
+
+        public async Task<List<BreweryItem>> GetBreweryType(string breweryType)
+        {
+            var response = await _httpClient.GetAsync($"{_breweryEndpoint}?by_type={breweryType}&per_page=36");
+            response.EnsureSuccessStatusCode();
+
+            var string_ = await response.Content.ReadAsStringAsync();
+
+            var dto = JsonConvert.DeserializeObject<List<BreweryDto>>(string_);
+
+            return dto.Select(x => x.ToBreweryItem()).ToList();
+        }
         public async Task<BreweryItem> GetRandomBrewery()
         {
             // Make a request to the /breweries endpoint to get a list of all breweries

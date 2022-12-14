@@ -1,4 +1,4 @@
-﻿@page "/search"
+﻿@page "/filter"
 @using CA3Brewery.Brewery
 @inject IBreweryService BreweryService
 @using System.Collections.Generic
@@ -9,14 +9,22 @@
 @inject HttpClient Http
 
 <PageTitle>Brewery</PageTitle>
-<h1>Search Brewery</h1>
+<h1>Filter Type of Breweries</h1>
 
 <div class="form-group">
-    <label for="searchInput">Search for a brewery:</label>
-    <input type="text" class="form-control" id="searchInput" @bind="searchQuery" />
-    <button class="btn btn-secondary mt-3" @onclick="OnInitializedAsync">Reset</button>
-    <button class="btn btn-secondary mt-3" @onclick="SearchBreweries">Search</button>
+    <label for="exampleFormControlSelect1">Filter by Type</label> 
+    <select class="form-control" id="searchInput" @bind="searchType">
+        <option value="micro"@onclick="GetBreweryType">Micro</option>
+        <option value="nano">Nano</option>
+        <option value="regional">Regional</option>
+        <option value="planning">Planning</option>
+        <option value="contract">Contract</option>
+        <option value="brewpub">Brewpub</option>
+        <option value="closed">Closed</option>
+    </select>
+    <button class="btn btn-secondary mt-3" @onclick="GetBreweryType">Submit</button>
 </div>
+
 <div>
     <div class="card-columns">
         <div class="row d-flex">
@@ -35,10 +43,8 @@
     </div>
 </div>
 
-@if (breweries.Count == 0)
-{
-    <p>No results found for search query for '@searchQuery'.</p>
-}
+
+
 
 @if (Error != null)
 {
@@ -46,18 +52,8 @@
 }
 
 @code {
-    //<div>
-    //<label>Select page:</label>
-    //@for (int i = 1; i <= 5; i++)
-    //{
-    //<button class="btn btn-primary" @onclick="() => SelectPage(i)">@i</button>
-    //}
-    //</div>
-}
-
-@code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
-    private string searchQuery = "";
+    private string searchType;
     private BreweryItem selectedBrewery;
     public string Error { get; set; }
     private int selectedPage = 10;
@@ -80,12 +76,11 @@
         }
     }
 
-    // Method to search for breweries
-    private async Task SearchBreweries()
+    private async Task GetBreweryType()
     {
         try
         {
-            breweries = await BreweryService.SearchBreweries(searchQuery);
+            breweries = await BreweryService.GetBreweryType(searchType);
         }
         catch (Exception e)
         {
@@ -94,20 +89,10 @@
         }
     }
 
+
     //navigation
     private void NavigateToBreweryDetails(string id)
     {
         Navigation.NavigateTo($"/brewery/{id}");
     }
-
-    private void NavigateBack()
-    {
-        Navigation.NavigateTo($"/");
-    }
-
-    private void NavigateRandom()
-    {
-        Navigation.NavigateTo($"/random");
-    }
-
 }

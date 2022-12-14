@@ -8,5 +8,6 @@ namespace CA3Brewery.Brewery
         Task<BreweryItem> GetRandomBrewery();
         Task<BreweryItem> GetBreweryDetails(string id);
         Task<List<BreweryItem>> SearchBreweries(string query);
+        Task<List<BreweryItem>> GetBreweryType(string breweryType);
     }
 }
