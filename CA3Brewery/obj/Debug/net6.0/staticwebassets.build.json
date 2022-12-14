@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pX9vNqRhu2o2Ywb3Mb08vTAv1nEYn/VnPlr21gEDmvg=",
+  "Hash": "SeqTV9cUO9Obyi97lNJtwfdS+l0TIFIb/Zbk0/eVxlk=",
   "Source": "CA3Brewery",
   "BasePath": "/",
   "Mode": "Root",
@@ -7291,23 +7291,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "CA3Brewery",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elije\\source\\repos\\CA3EAD\\CA3Brewery\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     }
   ]
 }

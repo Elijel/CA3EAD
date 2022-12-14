@@ -6,21 +6,58 @@
 
 @inject HttpClient Http
 
+<h2><strong>Random Brewery</strong</h2>
+
+@if (RandomBrewery != null)
+{
+    <table class="table table-sm table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name:</th>
+          <td>@RandomBrewery.name</td>
+        </tr>
+        <tr>
+          <th scope="row">Brewery Type:</th>
+          <td>@RandomBrewery.brewery_type</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Address:</th>
+          <td>@RandomBrewery.street</td>
+        </tr>
+        <tr>
+          <th scope="row">City:</th>
+          <td>@RandomBrewery.city</td>
+        </tr>
+        <tr>
+          <th scope="row">State:</th>
+          <td>@RandomBrewery.state</td>
+        </tr>
+        <tr>
+          <th scope="row">Country:</th>
+          <td>@RandomBrewery.country</td>
+        </tr>
+        <tr>
+          <th scope="row">Website URL:</th>
+          <td>@RandomBrewery.website_url</td>
+        </tr>
+      </tbody>
+    </table>
+}
+
+<button class="btn btn-secondary" @onclick="Return">Return</button>
+
+
 @if (Error != null)
 {
     <p>Error: @Error</p>
 }
-
-@if (RandomBrewery != null)
-{
-    <h1>Random Brewery</h1>
-    <p>Name: @RandomBrewery.name</p>
-    <p>Brewery Type: @RandomBrewery.brewery_type</p>
-    <p>Address: @RandomBrewery.street</p>
-    // Other details of the selected brewery
-}
-
-<button class="btn btn-primary" @onclick="Return">Return</button>
 
 @code {
     public BreweryItem RandomBrewery { get; set; }

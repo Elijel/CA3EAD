@@ -5,17 +5,51 @@
 @using System.Collections.Generic
 
 <PageTitle>Brewery Details</PageTitle>
-
+<h2><strong>Brewery Details</strong</h2>
 @if (selectedBrewery != null)
 {
-    <h2>Brewery Details</h2>
-    <p>Name: @selectedBrewery.name</p>
-    <p>Brewery Type: @selectedBrewery.brewery_type</p>
-    <p>Address: @selectedBrewery.street</p>
-    // Other details of the selected brewery
+    <table class="table table-sm table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name:</th>
+          <td>@selectedBrewery.name</td>
+        </tr>
+        <tr>
+          <th scope="row">Brewery Type:</th>
+          <td>@selectedBrewery.brewery_type</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Address:</th>
+          <td>@selectedBrewery.street</td>
+        </tr>
+        <tr>
+          <th scope="row">City:</th>
+          <td>@selectedBrewery.city</td>
+        </tr>
+        <tr>
+          <th scope="row">State:</th>
+          <td>@selectedBrewery.state</td>
+        </tr>
+        <tr>
+          <th scope="row">Country:</th>
+          <td>@selectedBrewery.country</td>
+        </tr>
+        <tr>
+          <th scope="row">Website URL:</th>
+          <td>@selectedBrewery.website_url</td>
+        </tr>
+      </tbody>
+    </table>
 }
 
-<button class="btn btn-primary" @onclick="Return">Return</button>
+<button class="btn btn-secondary" @onclick="Return">Return</button>
 
 @code {
     [Parameter]

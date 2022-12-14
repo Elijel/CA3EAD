@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/search"
 @using CA3Brewery.Brewery
 @inject IBreweryService BreweryService
 @using System.Collections.Generic
@@ -9,33 +9,14 @@
 @inject HttpClient Http
 
 <PageTitle>Brewery</PageTitle>
-<h1>List Of Breweries</h1>
-<br/>
+<h1>Search Brewery</h1>
 
-@code {
-    //<div>
-    //<label>Select page:</label>
-    //@for (int i = 1; i <= 5; i++)
-    //{
-    //<button class="btn btn-secondary" @onclick="() => SelectPage(i)">@i</button>
-    //}
-    //</div>
-}
-
-<div>
-    <label>Select page:</label>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(1)">1</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(2)">2</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(3)">3</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(4)">4</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(5)">5</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(6)">6</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(7)">7</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(8)">8</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(9)">9</button>
-    <button class="btn btn-secondary" @onclick="() => SelectPage(10)">10</button>
+<div class="form-group">
+    <label for="searchInput">Search for a brewery:</label>
+    <input type="text" class="form-control" id="searchInput" @bind="searchQuery" />
+    <button class="btn btn-secondary mt-3" @onclick="OnInitializedAsync">Reset</button>
+    <button class="btn btn-secondary mt-3" @onclick="SearchBreweries">Search</button>
 </div>
-
 <div>
     <div class="card-columns">
         <div class="row d-flex">
@@ -54,15 +35,33 @@
     </div>
 </div>
 
+@if (breweries.Count == 0)
+{
+    <p>No results found for search query for '@searchQuery'.</p>
+}
+
 @if (Error != null)
 {
     <p>Error: @Error</p>
 }
 
 @code {
+    //<div>
+    //<label>Select page:</label>
+    //@for (int i = 1; i <= 5; i++)
+    //{
+    //<button class="btn btn-primary" @onclick="() => SelectPage(i)">@i</button>
+    //}
+    //</div>
+}
+
+@code {
     private List<BreweryItem> breweries = new List<BreweryItem>();
+    private string searchQuery = "";
+    private BreweryItem selectedBrewery;
     public string Error { get; set; }
-    private int selectedPage = 1;
+    private int selectedPage = 10;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -81,10 +80,34 @@
         }
     }
 
+    // Method to search for breweries
+    private async Task SearchBreweries()
+    {
+        try
+        {
+            breweries = await BreweryService.SearchBreweries(searchQuery);
+        }
+        catch (Exception e)
+        {
+            Error = e.Message;
+            Console.WriteLine(Error);
+        }
+    }
+
     //navigation
     private void NavigateToBreweryDetails(string id)
     {
         Navigation.NavigateTo($"/brewery/{id}");
+    }
+
+    private void NavigateBack()
+    {
+        Navigation.NavigateTo($"/");
+    }
+
+    private void NavigateRandom()
+    {
+        Navigation.NavigateTo($"/random");
     }
 
     private async Task SelectPage(int page)
