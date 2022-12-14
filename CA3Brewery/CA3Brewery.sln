@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CA3Brewery", "CA3Brewery.csproj", "{0CBC8C3A-131D-4F5B-870E-78A7F0BD5353}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCA3Brewery", "..\TestCA3Brewery\TestCA3Brewery.csproj", "{56405F8C-1350-41A4-9F4F-E8360E37C2C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0CBC8C3A-131D-4F5B-870E-78A7F0BD5353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CBC8C3A-131D-4F5B-870E-78A7F0BD5353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CBC8C3A-131D-4F5B-870E-78A7F0BD5353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56405F8C-1350-41A4-9F4F-E8360E37C2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56405F8C-1350-41A4-9F4F-E8360E37C2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56405F8C-1350-41A4-9F4F-E8360E37C2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56405F8C-1350-41A4-9F4F-E8360E37C2C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
